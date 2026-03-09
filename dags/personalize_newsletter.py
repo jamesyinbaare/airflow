@@ -11,7 +11,7 @@ _WEATHER_URL = (
     "apparent_temperature"
 )
 
-OBJECT_STORAGE_SYSTEM = os.getenv("OBJECT_STORAGE_SYSTEM", default="file")
+OBJECT_STORAGE_SYSTEM = os.getenv("OBJECT_STORAGE_SYSTEM", default="gs")
 OBJECT_STORAGE_CONN_ID = os.getenv("OBJECT_STORAGE_CONN_ID", default=None)
 OBJECT_STORAGE_PATH_NEWSLETTER = os.getenv(
     "OBJECT_STORAGE_PATH_NEWSLETTER",
