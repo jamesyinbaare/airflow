@@ -15,15 +15,15 @@ OBJECT_STORAGE_SYSTEM = os.getenv("OBJECT_STORAGE_SYSTEM", default="gs")
 OBJECT_STORAGE_CONN_ID = os.getenv("OBJECT_STORAGE_CONN_ID", default="my_gcs_conn")
 OBJECT_STORAGE_PATH_NEWSLETTER = os.getenv(
     "OBJECT_STORAGE_PATH_NEWSLETTER",
-    default="include/newsletter",
+    default="astro-airflow/newsletter",
 )
 OBJECT_STORAGE_PATH_USER_INFO = os.getenv(
     "OBJECT_STORAGE_PATH_USER_INFO",
-    default="include/user_data",
+    default="astro-airflow/user_data",
 )
 OBJECT_STORAGE_LOCATIONS_FILE = os.getenv(
     "OBJECT_STORAGE_LOCATIONS_FILE",
-    default="cache/locations.json",
+    default="astro-airflow/locations.json",
 )
 
 SYSTEM_PROMPT = (
