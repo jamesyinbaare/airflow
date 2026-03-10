@@ -19,7 +19,7 @@ OBJECT_STORAGE_PATH_NEWSLETTER = os.getenv(
 )
 OBJECT_STORAGE_PATH_USER_INFO = os.getenv(
     "OBJECT_STORAGE_PATH_USER_INFO",
-    default="astro-airflow/user_data",
+    default="astro-airflow/user-data",
 )
 OBJECT_STORAGE_LOCATIONS_FILE = os.getenv(
     "OBJECT_STORAGE_LOCATIONS_FILE",
