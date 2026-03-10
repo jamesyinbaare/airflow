@@ -255,7 +255,7 @@ def personalize_newsletter():
         )
 
         personalized_newsletter_path = (
-            object_storage_path / f"{date}-newsletter_userid-{id}.txt"
+            object_storage_path / f"{date}-newsletter-userid-{id}.txt"
         )
 
         personalized_newsletter_path.write_text(updated_content)
