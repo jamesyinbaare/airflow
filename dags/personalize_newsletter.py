@@ -1,7 +1,6 @@
 import os
 
-from airflow.decorators import task
-from airflow.sdk import dag, Asset
+from airflow.sdk import dag, Asset, task
 from pendulum import datetime, duration
 
 _WEATHER_URL = (
@@ -145,7 +144,7 @@ def personalize_newsletter():
             conn_id=OBJECT_STORAGE_CONN_ID,
         )
 
-        date_newsletter_path = object_storage_path / f"{date}_newsletter.txt"
+        date_newsletter_path = object_storage_path / f"{date}-newsletter.txt"
 
         newsletter_content = date_newsletter_path.read_text()
 
@@ -235,7 +234,7 @@ def personalize_newsletter():
             conn_id=OBJECT_STORAGE_CONN_ID,
         )
 
-        daily_newsletter_path = object_storage_path / f"{date}_newsletter.txt"
+        daily_newsletter_path = object_storage_path / f"{date}-newsletter.txt"
 
         generic_content = daily_newsletter_path.read_text()
 
@@ -256,7 +255,7 @@ def personalize_newsletter():
         )
 
         personalized_newsletter_path = (
-            object_storage_path / f"{date}_newsletter_userid_{id}.txt"
+            object_storage_path / f"{date}-newsletter_userid-{id}.txt"
         )
 
         personalized_newsletter_path.write_text(updated_content)
